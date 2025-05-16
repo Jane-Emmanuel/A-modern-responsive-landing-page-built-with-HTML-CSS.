@@ -20,7 +20,7 @@
       <h1 class="logo">BrandName</h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#" aria-current="page">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -81,13 +81,13 @@
   
   <section class="social">
     <div class="container">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://x.com" target="_blank">x</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a> 
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
     </div>
   </section>
 
-  <button id="scrollTopBtn" onclick="scrollToTop()">Top</button>
+  <button id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top" onclick="scrollToTop()">↑</button>
 
   <footer>
     <div class="container">
@@ -96,6 +96,7 @@
   </footer>
 
   <script>
+    // Show or hide scroll to top button based on scroll position
     window.onscroll = function() {
       const btn = document.getElementById("scrollTopBtn");
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -104,9 +105,18 @@
         btn.style.display = "none";
       }
     };
+
+    // Smooth scroll to top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
 </html>
+
+   
+        
+        
+   
+
+ 
